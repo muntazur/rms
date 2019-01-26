@@ -17,8 +17,13 @@ class CategoryController extends Controller
     }
     public function getAllItem($category_id)
     {   
-        echo $category_id;
+        //echo $category_id;
         $items = DB::table('items')->get()->where('category_id',$category_id);
         return view('items.home',['items'=>$items]);
+    }
+
+    public function getOrder($item_id)
+    {
+        
     }
 }

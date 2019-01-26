@@ -25,15 +25,6 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-
-                <li class="sidebar-brand">
-                    <a href="">
-                        Categories
-                    </a>
-                </li>
-
-                @yield('content')
-
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -41,7 +32,7 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <a href="/categories" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+                <a href="/categories" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a> 
             </div>
             
         </div>
@@ -61,6 +52,8 @@
         $("#wrapper").toggleClass("toggled");
         });
         </script>
+
+    @yield('content')
 
 </body>
 

@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::get('categories','CategoryController@getAllCategory');
 Route::get('categories/{category_id}','CategoryController@getAllItem');
+Route::get('categories/order/{item_id}','CategoryController@getOrder');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
