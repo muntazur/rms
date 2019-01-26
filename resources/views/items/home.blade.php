@@ -1,7 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.main')
+
 
 
 @section('content')
+
+    <h2 align="center"> {{ $category_name->name }} </h2>
     @foreach($items as $item)
     <div align="" style="float:left;margin:10px">
 

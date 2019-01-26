@@ -18,8 +18,9 @@ class CategoryController extends Controller
     public function getAllItem($category_id)
     {   
         //echo $category_id;
+        $category_name = DB::table('categories')->select('name')->where('id',$category_id)->first();
         $items = DB::table('items')->get()->where('category_id',$category_id);
-        return view('items.home',['items'=>$items]);
+        return view('items.home',['items'=>$items])->with('category_name',$category_name);
     }
 
     public function getOrder($item_id)

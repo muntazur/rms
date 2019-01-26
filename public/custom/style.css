@@ -2,5 +2,20 @@ img
 {
     height:80px;
     width:80px;
-    border-radius:50%;
+    border-radius:50%
+}
+h1{
+    font-size: 50px
+}
+ul,li{
+    display: inline-block
+}
+ul,li,a{
+    text-decoration:none;
+    margin:5px;
+    color:Black
+}
+.nav{
+   background:darkgray;
+   margin-bottom:30px
 }
