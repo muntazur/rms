@@ -13,7 +13,7 @@
               {!! menu('main') !!}
          </div>
 
-         <div class = "container container-list">
+         <div class = "container">
                 @yield('content')
          </div>
 

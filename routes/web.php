@@ -14,10 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('categories','CategoryController@getAllCategory');
 Route::get('categories/{category_id}','CategoryController@getAllItem');
-Route::get('categories/order/{item_id}','CategoryController@getOrder');
-
+Route::get('categories/order/{item_id}/{item_name}','CategoryController@getOrder');
+Route::post('order', [
+    'uses' => 'CategoryController@storeOrder'
+  ]);
+Route::get('contact',function(){
+    return view('contact.contact');
+});
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

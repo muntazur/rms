@@ -13,7 +13,7 @@
             <h5>{{$item->name}}</h5>
             <h6 style="color:red" >Empty!</h6>
         @else
-            <a href="order/{{$item->id}}"><img src="{{ asset('storage/'.$item->image) }}" /></a>
+            <a href="order/{{$item->id}}/{{$item->name}}"><img src="{{ asset('storage/'.$item->image) }}" /></a>
             <h5>{{$item->name}}</h5>
             <h6 style="color:green" >Available!</h6>
         @endif

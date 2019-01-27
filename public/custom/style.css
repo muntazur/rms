@@ -5,12 +5,14 @@ img
     border-radius:50%
 }
 h1{
-    font-size: 50px
+    font-size: 50px;
+    text-align: center;
 }
 ul,li{
     display: inline-block
 }
 ul,li,a{
+
     text-decoration:none;
     margin:5px;
     color:Black
@@ -19,3 +21,14 @@ ul,li,a{
    background:darkgray;
    margin-bottom:30px
 }
+
+.container li a{
+
+    text-decoration: none;
+    text-align:center;
+    color:black;
+    background:silver;
+    padding:10px;
+    border-radius:5px
+}
+
