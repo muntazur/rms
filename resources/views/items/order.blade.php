@@ -1,5 +1,14 @@
 @extends('layouts.main')
 
+@section('navigation')
+    <div style="">
+        {!! menu('main') !!}
+    </div>
+    <div style="">
+        {!! menu('logout') !!}
+    </div>
+@endsection
+
 @section('content')
     <h2 align="center"> {{$item_name}} </h2>
     <h6 align="center" style="color:green"> order now </h6>
@@ -10,24 +19,24 @@
     {!! Form::hidden('item_name',$item_name) !!}
     <br>
     {!! Form:: label('quantity', 'Quantity') !!}
-    {!! Form::text('quantity',$value=null,$attribue=['placeholder'=>'Enter quantity','name'=>'quantity','class'=>'form-control'])!!}
+    {!! Form::text('quantity',$value=null,$attribue=['placeholder'=>'Enter quantity','name'=>'quantity','class'=>'form-control','required'=>'required'])!!}
     <br>
     {!! Form:: label('name', 'Name')!!}
-    {!! Form::text('name',$value=null,$attribue=['placeholder'=>'Enter your name','name'=>'name','class'=>'form-control'])!!}
+    {!! Form::text('name',$value=null,$attribue=['placeholder'=>'Enter your name','name'=>'name','class'=>'form-control','required'=>'required'])!!}
     <br>
     {!! Form:: label('email', 'Email')!!}
-    {!! Form::text('email',$value=null,$attribue=['placeholder'=>'Enter your email','name'=>'email','class'=>'form-control'])!!}         
+    {!! Form::text('email',$value=null,$attribue=['placeholder'=>'Enter your email','name'=>'email','class'=>'form-control','required'=>'required'])!!}         
     
     <br>
     {!! Form:: label('phone','Phone') !!}
-    {!! Form::text('phone',$value=null,$attribue=['placeholder'=>'Enter your phone','name'=>'phone','class'=>'form-control'])!!}
+    {!! Form::text('phone',$value=null,$attribue=['placeholder'=>'Enter your phone','name'=>'phone','class'=>'form-control','required'=>'required'])!!}
     <br>
     {!! Form:: label('address','Address') !!}
-    {!! Form::text('address',$value=null,$attribue=['placeholder'=>'Where to ship','name'=>'address','class'=>'form-control'])!!}
+    {!! Form::text('address',$value=null,$attribue=['placeholder'=>'Where to ship','name'=>'address','class'=>'form-control','required'=>'required'])!!}
     <br>
     {!! Form::label('date','Date') !!}
     {!! Form::date('date', \Carbon\Carbon::now()) !!}
-    {!! Form::submit('Submit',$attribue=['class'=>'button','name'=>'submit']) !!}
+    {!! Form::submit('Submit',$attribue=['class'=>'btn btn-primary','name'=>'submit']) !!}
 
 {!! Form::close() !!}
      

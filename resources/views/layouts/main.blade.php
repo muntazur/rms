@@ -10,7 +10,7 @@
 </head>
 <body>
          <div class = "nav">
-              {!! menu('main') !!}
+              @yield('navigation')
          </div>
 
          <div class = "container">
